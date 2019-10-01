@@ -1,10 +1,28 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Cliente from './components/Cliente';
+
+
+function HolaMundo(props) {
+  return (
+  <div>
+      <h1>Hola {props.nombre} {props.apellido}</h1>
+  </div>);
+}
+
+const Saludo = (props) => {
+  return <h2>Hasta mañana {props.nombre}</h2>;
+}
 
 function App() {
   return (
-    <div className="App">
+    <div>
+        <HolaMundo nombre="Juan" apellido="Perez" />
+        <Cliente nombre="Juan" />
+        <Saludo nombre="Juan" />
+    </div>
+    /* <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -19,7 +37,7 @@ function App() {
           Learn React
         </a>
       </header>
-    </div>
+    </div> */
   );
 }
 
